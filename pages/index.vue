@@ -5,24 +5,10 @@
       <h1 class="title">
         static-blog
       </h1>
-      <h2 class="subtitle">
-        Statically generated blog with Nuxt.js and Netlify CMS
-      </h2>
       <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+        <n-link to="/blog" class="button--grey">
+          Netlify CMS blog index
+        </n-link>
       </div>
     </div>
   </div>

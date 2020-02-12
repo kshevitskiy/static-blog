@@ -1,14 +1,14 @@
-export const state = () => ({
+const state = () => ({
   blogPosts: []
 })
 
-export const mutations = {
+const mutations = {
   setBlogPosts (state, list) {
     state.blogPosts = list
   }
 }
 
-export const actions = {
+const actions = {
   async nuxtServerInit ({ commit }) {
     const files = await require.context('~/assets/content/blog/', false, /\.json$/)
     const blogPosts = files.keys().map((key) => {
@@ -18,4 +18,10 @@ export const actions = {
     })
     await commit('setBlogPosts', blogPosts)
   }
+}
+
+export default {
+  state,
+  mutations,
+  actions
 }
